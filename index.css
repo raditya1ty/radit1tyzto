@@ -1,0 +1,59 @@
+.icon-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(124, 18, 224, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(253, 8, 8, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007aff;
+    font-weight: bold;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
+
+.popup-close {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

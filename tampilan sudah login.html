@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBXStore | Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan depan/styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="img/Logo baru.jpg" alt="Logo">
+            <span>RBX STORE</span>
+        </div>
+        
+<p>versi:2.0</p>
+
+        <div class="menu">
+            <i class="fas fa-bars"></i>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+          <p>Premium</p>
+          <style>
+            p {
+                color: #fffb00;
+            }
+          </style>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="slider">
+            <div class="slides">
+                <img src="img/natal.jpg" alt="Gambar 1">
+                <img src="img/roblox.jpeg" alt="Gambar 2">
+                <img src="img/diskon.jpg" alt="Gambar 3">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>WEB joki dan desain</h2>
+        <div class="item">
+            <img src="img/website.png">
+            <a href=""></a>
+        </div>
+    </div>
+   
+    <div class="section">
+        <h2>POPULER</h2>
+        <div class="item">
+            <img src="img/logo blirbx.png" alt="Mobile Legends">
+        <a href="https://belirbx.com/robux">topup roblox</a>
+        </div>
+        <div class="item">
+            <img src="img/donate.jpg" alt="sociabuzz">
+            <a href="https://sociabuzz.com/raditiahamzah">link socialbuzz</a>
+        </div>
+        <div class="item">
+            <img src="img/tugas.jpg" alt="Genshin Impact">
+           <a href="html/tugas.html">tugas sekolah</a>
+        </div>
+   
+    </div>
+    <div class="icon-button" onclick="togglePopup()">
+        <img src="img/Logo baru.jpg" alt="Ikon">
+    </div>
+
+    <!-- Pop-up -->
+    <div class="popup" id="popup">
+        <a href="https://wa.me/62082138555015" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20"> WhatsApp Owner
+        </a>
+        <a href="https://wa.me/62085183792518" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20"> WhatsApp admin
+        </a>
+        <a href="https://www.instagram.com/ztoradit1/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20"> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@radit1ty" target="_blank">
+            <img src="img/tiktok.jpeg" alt="TikTok" width="20"> TikTok
+        </a>
+        <button class="popup-close" onclick="togglePopup()">Tutup</button>
+    </div>
+
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+
+
+<div class="container">
+    <h1>Player Musik</h1>
+    <audio id="audioPlayer" controls>
+      <source id="audioSource" src="" type="audio/mp3">
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+    <div class="song-list">
+      <h3>Pilih Lagu:</h3>
+      <button onclick="playSong('song1.mp3')">Lagu 1</button>
+      <button onclick="playSong('song2.mp3')">Lagu 2</button>
+      <button onclick="playSong('song3.mp3')">Lagu 3</button>
+      <button onclick="playSong('song4.mp3')">Lagu 4</button>
+      <button onclick="playSong('song5.mp3')">Lagu 5</button>
+      <button onclick="playSong('song6.mp3')">Lagu 6</button>
+      <button onclick="playSong('song7.mp3')">Lagu 7</button>
+    </div>
+  </div>
+  <script>
+    function playSong(song) {
+      const audioPlayer = document.getElementById("audioPlayer");
+      const audioSource = document.getElementById("audioSource");
+      
+      // Menentukan sumber audio berdasarkan pilihan
+      audioSource.src = song;
+      audioPlayer.load(); // Memuat ulang audio dengan sumber baru
+      audioPlayer.play(); // Memutar audio
+    }
+  </script>
+
+
+
+
+<div class="container">
+    <div id="clock"></div>
+    <div id="azan-times">
+        <h2>Waktu Azan</h2>
+        <ul>
+            <li><strong>Subuh:</strong> <span id="subuh-time"></span></li>
+            <li><strong>Dzuhur:</strong> <span id="dzuhur-time"></span></li>
+            <li><strong>Ashar:</strong> <span id="ashar-time"></span></li>
+            <li><strong>Maghrib:</strong> <span id="maghrib-time"></span></li>
+            <li><strong>Isya:</strong> <span id="isya-time"></span></li>
+        </ul>
+    </div>
+</div>
+<audio id="azan-audio" src="azan makkah.mp3" preload="auto"></audio>
+
+
+<!-- Elemen Audio untuk Azan -->
+
+  <script>
+    function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+function updateAzanTimes() {
+    // Ganti dengan waktu azan sesuai dengan lokasi atau API
+    const azanTimes = {
+        subuh: '03.34',
+        dzuhur: '11.55',
+        ashar: '14.53',
+        maghrib: '17.50',
+        isya: '18.49'
+    };
+
+    document.getElementById('subuh-time').textContent = azanTimes.subuh;
+    document.getElementById('dzuhur-time').textContent = azanTimes.dzuhur;
+    document.getElementById('ashar-time').textContent = azanTimes.ashar;
+    document.getElementById('maghrib-time').textContent = azanTimes.maghrib;
+    document.getElementById('isya-time').textContent = azanTimes.isya;
+}
+
+function checkAzanTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    const azanTimes = {
+        subuh: { hours: 5, minutes: 0 },
+        dzuhur: { hours: 12, minutes: 15 },
+        ashar: { hours: 15, minutes: 30 },
+        maghrib: { hours: 18, minutes: 0 },
+        isya: { hours: 19, minutes: 15 }
+    };
+
+    for (const [key, time] of Object.entries(azanTimes)) {
+        if (hours === time.hours && minutes === time.minutes) {
+            alert(`Saatnya Azan ${key.charAt(0).toUpperCase() + key.slice(1)}!`);
+            playAzan();  // Panggil fungsi untuk memutar azan
+            break;
+        }
+    }
+}
+
+function playAzan() {
+    const azanAudio = document.getElementById('azan-audio');
+    azanAudio.play(); // Memutar audio azan
+}
+
+setInterval(updateClock, 1000);
+setInterval(checkAzanTime, 60000); // Cek setiap menit untuk waktu azan
+
+updateAzanTimes();
+
+  </script>
+
+  <style>
+    
+    .container {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#clock {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#azan-times h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+#azan-times ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#azan-times li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #16a085;
+}
+
+#azan-times li strong {
+    color: #2c3e50;
+}
+
+audio {
+    display: none;
+}
+  </style>
+</body>
+</html>
