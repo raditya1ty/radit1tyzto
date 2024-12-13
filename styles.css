@@ -1,0 +1,245 @@
+
+.icon-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(124, 18, 224, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(253, 8, 8, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007aff;
+    font-weight: bold;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
+
+.popup-close {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #2e003e;
+    color: white;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #4a0072;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+.header .menu i {
+    font-size: 24px;
+    margin-right: 20px;
+}
+.header .menu .search {
+    margin-right: 20px;
+}
+.header .menu .search input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.header .menu .search button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #4a0072;
+    cursor: pointer;
+}
+.header .menu .register {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a0072;
+    color: #ffcc00;
+    cursor: pointer;
+}
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+.banner img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+.section {
+    padding: 20px;
+}
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.section .item {
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+}
+.section .item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.section .item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+    .header .menu i {
+        display: none;
+    }
+    .header .menu .search {
+        display: none;
+    }
+    .header .menu .register {
+        display: none;
+    }
+    .section .item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slides {
+    display: flex;
+    width: calc(800px * 5); /* Jumlah slide */
+    animation: slideAnimation 10s infinite;
+}
+
+.slider .slides img {
+    width: 800px;
+    height: 200px;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-800px); }
+    45% { transform: translateX(-800px); }
+    50% { transform: translateX(-1600px); }
+    70% { transform: translateX(-1600px); }
+    75% { transform: translateX(-2400px); }
+    95% { transform: translateX(-2400px); }
+    100% { transform: translateX(0); }
+}
+a {
+    color: #ffffff;
+}
+
+
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #3c4048;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  audio {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .song-list button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .song-list button:hover {
+    background-color: #21a1f1;
+  }
+
+
+
+
+
+
+
+
